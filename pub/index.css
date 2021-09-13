@@ -1,11 +1,12 @@
 .image-container {
 	background-image: url("https://i.pinimg.com/736x/d0/6e/77/d06e77ce2c660ad82f1c28175daaacac--cloud-wallpaper-baby-rooms.jpg"); /* The image used - important! */
-	background-size: cover;
+	background-size:cover;
 	position: relative; /* Needed to position the cutout text in the middle of the image */
 	height:900px; /* Some height */
 	margin-top: -90px;
-  }
-  
+
+
+}
   .text {
 	background-color: white;
 	color: black;
@@ -33,3 +34,30 @@
 	top: 36%; /* Position text in the middle */
 	left: 50%; /* Position text in the middle */
 	transform: translate(-50%, -50%); /* Position text in the middle */}
+
+
+	.formatNavBar {
+		font-family:"Ink Free", Times, serif;
+color:rgb(139, 203, 224);		font-size: 16pt;
+
+
+
+		text-align: center; /* Center text */
+		position: absolute; /* Position text */
+		top: 65%; /* Position text in the middle */
+		left: 50%; /* Position text in the middle */
+		transform: translate(-50%, -50%); /* Position text in the middle */
+		
+	}
+
+	
+	
+	.docButton {
+		text-decoration: none;
+		padding: 10px;
+		border-radius: 5px;
+		
+		
+		
+
+	}
