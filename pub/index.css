@@ -13,79 +13,25 @@
 }
 
 .landingCover {
-	background-image: url("https://media.wired.com/photos/5dbb3f6ad08f8f0008121550/master/pass/Biz-books-570481205.jpg");
 	height: 100vh;
 	background-size: cover;
 	background-position: center;
 }
 
-.homeButton {
-	text-decoration: none;
-	color: brown;
-	padding: 10px;
-	border-radius: 5px;
-}
-.exampleButton {
-	text-decoration: none;
-	padding: 10px;
-	color: brown;
-	border-radius: 5px;
-}
-.docButton {
-	text-decoration: none;
-	padding: 10px;
-	color: brown;
-	border-radius: 5px;
-}
-/*adding hovering effects to each button*/
-.homeButton:hover {
-	text-decoration: none;
-	background-color: rgb(212, 204, 204);
 
-	color: brown;
-
-	padding-right: 10px;
-}
-.exampleButton:hover {
-	text-decoration: none;
-	background-color: rgb(212, 204, 204);
-
-	padding-right: 10px;
-	color: brown;
-}
-.docButton:hover {
-	text-decoration: none;
-	background-color: rgb(212, 204, 204);
-
-	color: brown;
-}
-.mainBox {
-	text-align: center;
+  
+  .text {
 	background-color: white;
-	/*CITATION: learned how to create a box shadow: https://www.w3schools.com/css/css3_shadows_box.asp*/
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-	border-radius: 5px;
-	width: 500px;
-	height: 150px;
-	float: right;
-	margin-top: 20%;
-	margin-right: 11%;
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-		"Lucida Sans", Arial, sans-serif;
-}
-#myId {
-	color: brown;
-	text-align: center;
-	margin-bottom: -15px;
-}
-.description {
 	color: black;
-	font-style: italic;
-	font-weight: lighter;
-	text-align: center;
-}
-.dividerSymbol {
-	text-align: center;
-	margin-bottom: -10px;
-}
+	font-size: 10vw; /* Responsive font size */
+	font-weight: bold;
+	margin: 0 auto; /* Center the text container */
+	padding: 10px;
+	width: 50%;
+	text-align: center; /* Center text */
+	position: absolute; /* Position text */
+	top: 50%; /* Position text in the middle */
+	left: 50%; /* Position text in the middle */
+	transform: translate(-50%, -50%); /* Position text in the middle */
+	mix-blend-mode: screen; /* This makes the cutout text possible */
+  }
