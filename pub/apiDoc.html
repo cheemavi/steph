@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Documentation</title>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Then we load a script that depends on jQuery -->
+    <link rel="stylesheet" type="text/css" href="./pop.css" />
+    <script defer type="text/javascript" src="time_archive.js"></script>
+
+    <!-- Then we load a script that depends on our libraries (and jQuery) -->
+  </head>
+  <body style="overflow-y: auto">
+    <header class="landingCover">
+      <navbar class="formatNavBar">
+        <a href="index.html" class="homeButton">Home</a>
+        <a href="examples.html" class="exampleButton">Examples</a>
+        <a href="documentation.html" class="docButton">Documentation</a>
+      </navbar>
+      <div class="examplesBox">
+        <h1 id="myId">Documentation</h1>
+       
+        <div style="text-align:left; margin-left:50px;">
+          <h2 style="color: brown;">API Documentation</h2>
+          <h3 style=" margin-top:-10px;text-decoration: underline dotted 1px brown;" >How to Create Time Archive Objects</h3>
+          <h4 style="font-weight: lighter; margin-top:-10px;"> The Time Archive library has 3 types of objects that can be created.<br />
+ Each object corresponds to a type of timeline that a user can make.  <br />  Each type of Time Archive object requires a location parameter for their constructor.
+ <br /> The location parameter refers to where the user wishes to add the newly made timeline.  <br />  If a location
+ is not specified then the newly created Time Archive object is added to the body of an HTML file. 
+            </h4>
+            <h4 style=" margin-top:-10px;text-decoration: underline dotted 1px brown;" >The 'PopUpTimeline' Object</h4>
+            <h4 style="font-weight: lighter; margin-top:-10px;"> In addition to a location parameter, the 'PopUpTimeline'
+also has a timeline style parameter. The timeline style parameter indicates which type of 'PopUpTimeline' style the user desires.
+The possible 'PopUpTimeline' styles are regular and soft. The regular style has rectangular popups that can  <br> be previewed if a user hovers over the popup's respective date on 
+the timeline. The regular style also allows the user to close a selected popup via   <br>an 'X' located on the selected popup. The soft style doesn't have the preview
+option that the regular style has, but it has buttons on the timeline that  <br> can be clicked to open a popup. When a button's date is clicked, the button's color changes, indicating that its been selected 
+and the respective  <br> popup opens up. Unlike the regular style popup, the soft style popups can 
+be closed by clicking away from the activated popup. If a timeline style is not specified in the 'PopUpTimeline' constructor then the timeline style is set to 'regular'.<br> <br> A 'PopUpTimeline' objected can be created like this: </h4>
+            <p style="margin-top:-10px"><pre><code style="border: dotted 1px grey; padding:5px ;">const historyofChocolate = new PopUpTimeline("#pop", "regular");</code></pre></p>
+            <h4 style=" text-decoration: underline dotted 1px brown;" >The 'SlideShowTimeLine' Object</h4>
+            <h4 style="font-weight: lighter; margin-top:-10px;"> Like the 'PopUpTimeline', the 'SlideShowTimeLine' also takes in a style parameter upon initialization. The possible timeline styles for the 'SlideShowTimeLine' are 'gallery' and 'regular'. The 'gallery' style has a slide for the timeline's title. The slide navigation buttons for this style are also on the left and right of the slide display. Unlike the 'gallery' style, the 'regular' style displays the timeline's title above the slide view. Also, the 'regular' style has the slide navigation buttons below the slide view.  If a timeline style is not specified in the 'SlideShowTimeLine' constructor then the timeline style is set to 'regular'.<br> <br> A 'SlideShowTimeLine' objected can be created like this: </h4>
+            <p><pre><code style="border: dotted 1px grey; padding:5px ;">const katyPerryDiscography = new SlideShowTimeLine("#slide", "gallery");</code></pre></p>
+            <h4 style="text-decoration: underline dotted 1px brown;" >The 'StandardTimeLine' Object</h4>
+            <h4 style="font-weight: lighter; margin-top:-10px;">Unlike the 'PopUpTimeline' and 'SlideShowTimeLine' objects, the 'StandardTimeLine' doesn't have a timeline style parameter.<br> It only has a location parameter. <br> <br> A 'StandardTimeLine' objected can be created like this: </h4>
+            <p><pre><code style="border: dotted 1px grey; padding:5px ;">const Castlevania = new StandardTimeLine("#standardEx");</code></pre></p>
+            <h3 style=" text-decoration: underline dotted 1px brown;" >API</h3>
+            <h4 style="  margin-top:-10px; text-decoration: underline dotted 1px brown;" > PopUpTimeline Methods </h4>
+            <!-- popuptimeline functions -->
+            <table style="width:90% ;font-weight:lighter;outline:1px grey solid; margin-left:10px;">
+                <tr>
+                  <th>Method Name</th>
+                  <th>Arguments and Their Types</th>
+                  <th>Behaviour</th>
+                </tr>
+             
+                <tr>
+                  <td>alterTimelineTitle</td>
+                  <td style="font-weight:lighter;">newTitle:String</td>
+                  <td>This method takes in a 'newTitle' string and sets the current timeline's title to this string.
+                     <br> If a 'newTitle' string is not specified then "Please enter new title" is set as the timeline's new 
+                      title.
+                  </td>
+                </tr>
+                <tr>
+                  <td>makepopUpMoment</td>
+                <td style="font-weight:lighter;">newDate:String  <br> 
+                    eventTitle:String <br>
+                    imagetoAdd:String 
+                    <br> descriptiontoAdd:String
+                  </td>
+                  <td>This method creates a new popup for the timeline with the  'newDate','eventTitle', 'imagetoAdd' , and 'descriptiontoAdd' arguments provided. After being created,the newly created popup is also added 
+                      to the timeline. Also, the 'imagetoAdd' parameter is a image url address string and not a computer path.<br>
+                      Each argument has a default value that's used if the user doesn't specify a value for the argument.
+                    <br> <strong>Default values for arguments if a value is not provided:</strong>
+                      <li>'newDate' : "Aug 01 2000"</li>
+                      <li>'eventTitle':"insert event title"</li>
+                      <li>'imagetoAdd':"https://www.aljazeera.com/wp-content/uploads/2021/02/roses.jpg?resize=770%2C513"</li>
+                      <li>'descriptiontoAdd':"INSERT DESCRIPTION HERE PLEASE INSERT DESCRIPTION HERE PLEASE INSERT DESCRIPTION HERE"</li> 
+                     
+                  </td>
+                </tr>
+                <tr>
+                    <td>changeColorScheme</td>
+                    <td>colorScheme:String</td>
+                    <td>Given a 'colorScheme' argument, this method changes the timeline's color scheme to what the 
+                     argument is.    <br> If the 'colorScheme' argument is not 'Normal', 'rustic', 'smooth', 'aqua', then a 'Normal' colorScheme is set.
+                     <br> If the 'colorScheme' argument is not given when this method is called, then the timeline's color scheme is set to
+                        'Normal'.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>changePopUpFont</td>
+                    <td>font:String</td>
+                    <td>This method takes the 'font' string argument and sets the font of all the timeline's text to the argument provided to this method. <br>
+                    If the 'font' argument is not provided to 'changePopUpFont', then the timeline's font is set to 'Times New Roman'. </td>
+                  </tr>
+                  <tr>
+                    <td>alterPopupTitle</td>
+                    <td>index:Int <br>
+                    title:String</td>
+                    <td>This method alters the title of the popup at the 'index' argument provided. 
+                        If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                        of all the popups.  If one of the arguments is not provided, then the method doesn't alter anything. 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>alterPopUpDate</td>
+                    <td>index:Int <br>
+                    newDate:String</td>
+                    <td>This method alters the date of the popup at the 'index' argument provided. 
+                        If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                        of all the popups.  If one of the arguments is not provided, then the method doesn't alter anything. 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>alterPopupPic</td>
+                    <td>index:Int <br>
+                        newPic:String</td>
+                    <td>This method alters the image of the popup at the 'index' argument provided. 
+                        If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                        of all the popups.  If one of the arguments is not provided, then the method doesn't alter anything. </td>
+                    <tr>
+                        <td>alterPopupDescription</td>
+                        <td>index:Int <br>
+                            newDesc:String</td>
+                        <td>This method alters the description of the popup at the 'index' argument provided. 
+                            If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                            of all the popups. If one of the arguments is not provided, then the method doesn't alter anything. </td>
+                      </tr>
+                      <tr>
+                        <td>deletePopup</td>
+                        <td>index:Int</td>
+                        <td>This method deletes the popup at the 'index' argument provided. The popup is deleted from the rendered timeline and 
+                            the list keeping track of the timeline's popups. If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                            of all the popups. If no argument is provided, then the method doesn't alter anything.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>sortDecreasingPopups</td>
+                        <td>N/A</td>
+                        <td>This method sorts the popups by their date property. The popups are sorted in decreasing order and the timeline is re-rendered with the newly sorted popups.</td>
+                      </tr>
+                      <tr>
+                        <td>sortIncreasingPopups</td>
+                        <td>N/A</td>
+                        <td>This method sorts the popups by their date property. The popups are sorted in increasing order and the timeline is re-rendered with the newly sorted popups.</td>
+                      </tr>
+                  
+              </table>
+
+              <h4 style=" text-decoration: underline dotted 1px brown;" > SlideShowTimeLine Methods </h4>
+
+            <!-- slideshowtimeline functions -->
+            <table style="width:90% ;font-weight:lighter;outline:1px grey solid; margin-left:10px;">
+                <tr>
+                  <th>Method Name</th>
+                  <th>Arguments and Their Types</th>
+                  <th>Behaviour</th>
+                </tr>
+             
+                <tr>
+                  <td>alterSlideTimelineTitle</td>
+                  <td style="font-weight:lighter;">newTitle:String</td>
+                  <td>This method takes in a 'newTitle' string and sets the current timeline's title to this string.
+                     <br> If a 'newTitle' string is not specified then "Insert Title" is set as the timeline's new 
+                      title.
+                  </td>
+                </tr>
+                <tr>
+                    <td>addSlide</td>
+                    <td style="font-weight:lighter;"> slideTitle:String <br>
+                        dateTitle:String  <br> 
+                        imagetoAdd:String 
+                        <br> descriptiontoAdd:String</td>
+                    <td>This method creates a new slide for the timeline with the 'slideTitle', 'dateTitle','imagetoAdd' , and 'descriptiontoAdd' arguments provided. After being created,the newly created slide is also added 
+                        to the timeline. Also, the 'imagetoAdd' parameter is a image url address string and not a computer path.<br>
+                        Each argument has a default value that's used if the user doesn't specify a value for the argument.
+                      <br> <strong>Default values for arguments if a value is not provided:</strong>
+                      
+                        <li>'slideTitle':"PUT NAME OF EVENT HERE"</li>
+                        <li>'newDate' : "Mar 02 2000"</li>
+                        <li>'imagetoAdd':"https://www.aljazeera.com/wp-content/uploads/2021/02/roses.jpg?resize=770%2C513"</li>
+                        <li>'descriptiontoAdd':"INSERT DESCRIPTION HERE PLEASE INSERT DESCRIPTION HERE PLEASEINSERT DESCRIPTION HERE "</li> 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>removeSlide</td>
+                    <td style="font-weight:lighter;">indexofSlidetoRemove:Int</td>
+                    <td>This method deletes the slide at the 'indexofSlidetoRemove' argument provided. The slide is deleted from the rendered timeline and 
+                        the list keeping track of the timeline's slides. If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                        of all the slides. If no argument is provided, then the method doesn't alter anything.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>alterFont</td>
+                    <td style="font-weight:lighter;"> fontName:String  <br> 
+                        color:String </td>
+                    <td>This method changes the font and color of all of the timeline's text to the value of the arguments provided.
+                        Each argument also has a default value that's used when the user doesn't provide a value for an argument.
+                        <br> <strong>Default values for arguments if a value is not provided:</strong>
+                        <li>'fontName':"Times New Roman"</li>
+                        <li>'color' : "black"</li>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>changeBorder</td>
+                    <td style="font-weight:lighter;"> border:String   </td>
+                    <td>This method changes the the border of the display that displays the current slide.
+                       
+                        <br> <strong>Default values for 'border' if a value is not provided:</strong>
+                        <li>'border':"2px dotted black"</li>
+                        
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>alterTitleofSelectedSlide</td>
+                    <td> 
+                        newTitle:String<br> index:Int</td>
+                    <td>This method alters the title of the slide at the 'indextoAlter' argument provided. 
+                        If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                        of all the slides.  If one of the arguments is not provided, then the method doesn't alter anything. 
+                      <br><strong>NOTE:</strong>   the title slide's title for the gallery style timeline cannot be changed with this method. 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>alterImgofSelectedSlide</td>
+                    <td> 
+                        newImg:String<br> index:Int</td>
+                    <td>This method alters the image of the slide at the 'indextoAlter' argument provided. 
+                        If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                        of all the slides.  If one of the arguments is not provided, then the method doesn't alter anything. 
+                      <br><strong>NOTE:</strong> This method doesn't alter the 'gallery' timeline style's title slide. 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>alterDateofSelectedSlide</td>
+                    <td> 
+                        newDate:String<br> index:Int</td>
+                    <td>This method alters the date of the slide at the 'indextoAlter' argument provided. 
+                        If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                        of all the slides.  If one of the arguments is not provided, then the method doesn't alter anything. 
+                      <br><strong>NOTE:</strong> This method doesn't alter the 'gallery' timeline style's title slide. 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>alterDescofSelectedSlide</td>
+                    <td> 
+                        newDesc:String<br> index:Int</td>
+                    <td>This method alters the description of the slide at the 'indextoAlter' argument provided. 
+                        If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                        of all the slides.  If one of the arguments is not provided, then the method doesn't alter anything. 
+                      <br><strong>NOTE:</strong> This method doesn't alter the 'gallery' timeline style's title slide. 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>sortDecreasingSlides</td>
+                     
+                        <td>N/A</td>
+                        <td>This method sorts the slides by their date property. The slides are sorted in decreasing order and the timeline is re-rendered with the newly sorted slides.</td>
+                      </tr>
+                  <tr>
+                    <td>sortIncreasingSlides</td>
+                    <td>N/A</td>
+                    <td>This method sorts the slides by their date property. The popups are sorted in increasing order and the timeline is re-rendered with the newly sorted slides.</td>
+                  </tr>
+                <tr>
+                    
+                
+                  
+              </table>
+              <h4 style=" text-decoration: underline dotted 1px brown;" > StandardTimeLine Methods </h4>
+
+                  <!-- standardtimeline functions -->
+            <table style="width:90% ;font-weight:lighter;outline:1px grey solid; margin-left:10px;">
+                <tr>
+                  <th>Method Name</th>
+                  <th>Arguments and Their Types</th>
+                  <th>Behaviour</th>
+                </tr>
+             
+                <tr>
+                  <td>alterTitle</td>
+                  <td style="font-weight:lighter;">newTitle:String</td>
+                  <td>This method takes in a 'newTitle' string and sets the current timeline's title to this string.
+                     <br> If a 'newTitle' string is not specified then "Insert Title" is set as the timeline's new 
+                      title.
+                  </td>
+                </tr>
+                <tr>
+                    <td>removeMoment</td>
+                    <td style="font-weight:lighter;">MomentToRemoveIndex:Int</td>
+                    <td>This method deletes the moment (other known as an event) at the 'indexofSlidetoRemove' argument provided. The slide is deleted from the rendered timeline and 
+                        the list keeping track of the timeline's moments. If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                        of all the moments. If no argument is provided, then the method doesn't alter anything.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>changeFont</td>
+                    <td style="font-weight:lighter;"> newFont:String   </td>
+                    <td>This method changes the font of all of the timeline's text to the value of the argument provided.
+                       
+                        <br> <strong>Default value for argument if a value is not provided:</strong>
+                        <li>'newFont':"Times New Roman"</li>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>changeCircleColor</td>
+                    <td style="font-weight:lighter;"> newColor:String   </td>
+                    <td>This method changes the  color of all of the circles on the timeline to the value of the argument provided.
+                       
+                        <br> <strong>Default value for argument if a value is not provided:</strong>
+                        <li>'newColor':"Black"</li>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>changeDateColor</td>
+                    <td style="font-weight:lighter;"> newColor:String   </td>
+                    <td>This method changes the  color of all of the dates on the timeline to the value of the argument provided.
+                       
+                        <br> <strong>Default value for argument if a value is not provided:</strong>
+                        <li>'newColor':"Black"</li>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>changeEventNameColor</td>
+                    <td style="font-weight:lighter;"> newColor:String   </td>
+                    <td>This method changes the  color of all of the event names on the timeline to the value of the argument provided.
+                       
+                        <br> <strong>Default value for argument if a value is not provided:</strong>
+                        <li>'newColor':"Black"</li>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>changeLineColor</td>
+                    <td style="font-weight:lighter;"> newColor:String   </td>
+                    <td>This method changes the color of the timeline's line to the value of the argument provided.
+                       
+                        <br> <strong>Default value for argument if a value is not provided:</strong>
+                        <li>'newColor':"Black"</li>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>changeTitleColor</td>
+                    <td style="font-weight:lighter;"> newColor:String   </td>
+                    <td>This method changes the color of the timeline's title to the value of the argument provided.
+                       
+                        <br> <strong>Default value for argument if a value is not provided:</strong>
+                        <li>'newColor':"Black"</li>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>makeMoment</td>
+                    <td style="font-weight:lighter;"> eventName:String<br> eventDate:String</td> 
+                    <td>This method creates a new moment (other known as event) for the timeline with the 'eventName' and 'eventDate' arguments provided. After being created,the newly created moment is also added 
+                        to the timeline. 
+                        Each argument has a default value that's used if the user doesn't specify a value for the argument.
+                      <br> <strong>Default values for arguments if a value is not provided:</strong>
+                      
+                        <li>'eventName':"insert eventName"</li>
+                        <li>'eventDate' : "Mar 02 2000"</li>
+                        
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>editMomentDate</td>
+                    <td> 
+                        MomentIndex:Int<br> newDate:String</td>
+                    <td>This method alters the date of the moment (other known as event) at the 'MomentIndex' argument provided. 
+                        If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                        of all the moments.  If one of the arguments is not provided, then the method doesn't alter anything. 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>editMomentName</td>
+                    <td> 
+                        MomentIndex:Int<br> newName:String</td>
+                    <td>This method alters the event name of the moment (other known as event) at the 'MomentIndex' argument provided. 
+                        If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                        of all the moments.  If one of the arguments is not provided, then the method doesn't alter anything. 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>addMomentResource</td>
+                    <td> 
+                        momentIndex:Int<br> linktoAdd:String</td>
+                    <td>This method attaches a hyperlink on the event name of the moment (other known as event) at the 'momentIndex' argument provided. 
+                        If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                        of all the moments.  If one of the arguments is not provided, then the method doesn't alter anything. 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>RemoveMomentResource</td>
+                    <td> 
+                        momentIndex:Int</td>
+                    <td>This method removes any hyperlinks attached to the event name of the moment (other known as event) at the 'momentIndex' argument provided. 
+                        If the index is invalid (out of bounds), then this method doesn't alter the list keeping track
+                        of all the moments.  If no argument is provided, then the method doesn't alter anything. 
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>sortDecreasingMoments</td>
+                    <td>N/A</td>
+                    <td>This method sorts the moments (other known as events) by their date property. The moments are sorted in decreasing order and the timeline is re-rendered with the newly sorted moments.</td>
+                  </tr>
+                  <tr>
+                    <td>sortIncreasingMoments</td>
+                    <td>N/A</td>
+                    <td>This method sorts the moments (other known as events) by their date property. The moments are sorted in increasing order and the timeline is re-rendered with the newly sorted moments.</td>
+                  </tr>
+
+
+
+              
+              
+                <tr>
+                    
+                
+                  
+              </table>
+
+        
+        </div>
+       
+        <h3 class="examples"></h3>
+      </div>
+    </header>
+
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,400 @@
+.prev,
+.next {
+	color: grey;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	user-select: none;
+	cursor: pointer;
+	height: 40px;
+	width: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 15px;
+}
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.prev1,
+.next1 {
+	color: rgb(15, 15, 15);
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	user-select: none;
+	cursor: pointer;
+	height: 40px;
+	width: 40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 15px;
+}
+.prev1:hover,
+.next1:hover {
+	background-color: rgba(214, 208, 208, 0.8);
+}
+/* Got hover darkens button styling and inspiration from :https://www.w3schools.com/howto/howto_js_slideshow.asp */
+
+.buttonView {
+	width: 650px;
+	height: 50px;
+
+	text-align: center;
+	margin-top: 10px;
+}
+
+.popupFormating:hover {
+	background-color: rgb(182, 179, 179);
+}
+
+/* Used some of the CSS from this how to make 
+a Vanilla JS popup tutorial: https://www.gitto.tech/posts/simple-popup-box-using-html-css-and-javascript/*/
+.popupModal .greyedoutBackground {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(201, 196, 196, 0.7);
+	z-index: 1;
+	display: none;
+	box-sizing: border-box;
+}
+
+.popupModal .popContent {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	background: #fff;
+	width: 400px;
+	height: 320px;
+	z-index: 2;
+	text-align: center;
+	padding: 20px;
+	border: grey 3px solid;
+}
+.infoBox {
+	width: 365px;
+	height: 300px;
+	margin: 20px;
+}
+.popupModal .popContent1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	background: #fff;
+	width: 400px;
+	height: 320px;
+	z-index: 2;
+	text-align: center;
+	padding: 20px;
+	border: grey 3px solid;
+	border-radius: 5%;
+}
+.infoBox1 {
+	width: 365px;
+	height: 300px;
+	margin: 20px;
+}
+
+.popupModal.open .greyedoutBackground {
+	display: block;
+}
+.popupModal.open .infoBox {
+	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	word-wrap: break-word;
+}
+/*purple color scheme styling */
+.popupModal.open .infoBox3 {
+	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	word-wrap: break-word;
+}
+/*styling the scrollbox for soft layout for popups*/
+/*PURPLE COLOR SCHEME*/
+.purpleView::-webkit-scrollbar {
+	width: 10px;
+}
+.purpleView::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+
+.purpleView::-webkit-scrollbar-thumb {
+	background: #735d78;
+	border-radius: 10px;
+}
+.purpleView::-webkit-scrollbar-thumb:hover {
+	background: #b392ac;
+}
+
+.purplePopUpHover:hover {
+	background-color: #b392ac;
+}
+
+.infoBox3 {
+	width: 365px;
+	height: 300px;
+	margin: 20px;
+}
+
+.popupModal.open .infoBox3::-webkit-scrollbar {
+	width: 20px;
+}
+.popupModal.open .infoBox3::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+
+.popupModal.open .infoBox3::-webkit-scrollbar-thumb {
+	background: #735d78;
+	border-radius: 10px;
+}
+.popupModal.open .infoBox3::-webkit-scrollbar-thumb:hover {
+	background: #b392ac;
+}
+.popupModal.open .infoBox1 {
+	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	word-wrap: break-word;
+}
+/*aqua color scheme styling*/
+.infoBox5 {
+	width: 365px;
+	height: 300px;
+	margin: 20px;
+}
+.popupModal.open .infoBox5 {
+	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	word-wrap: break-word;
+}
+.popupModal.open .infoBox5::-webkit-scrollbar {
+	width: 20px;
+}
+.popupModal.open .infoBox5::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+
+.popupModal.open .infoBox5::-webkit-scrollbar-thumb {
+	background: #022b3a;
+	border-radius: 10px;
+}
+.popupModal.open .infoBox5::-webkit-scrollbar-thumb:hover {
+	background: #1f7a8c;
+}
+.aquaHover:hover {
+	background-color: #1f7a8c;
+}
+.aquaScrollFormatting::-webkit-scrollbar {
+	width: 10px;
+}
+.aquaScrollFormatting::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+.aquaScrollFormatting::-webkit-scrollbar-thumb:hover {
+	background: #1f7a8c;
+}
+.aquaScrollFormatting::-webkit-scrollbar-thumb {
+	background: #022b3a;
+	border-radius: 10px;
+}
+/*rustic color scheme styling*/
+.infoBox4 {
+	width: 365px;
+	height: 300px;
+	margin: 20px;
+}
+.popupModal.open .infoBox4 {
+	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	word-wrap: break-word;
+}
+.popupModal.open .infoBox4::-webkit-scrollbar {
+	width: 20px;
+}
+.popupModal.open .infoBox4::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+
+.popupModal.open .infoBox4::-webkit-scrollbar-thumb {
+	background: #7f5539;
+	border-radius: 10px;
+}
+.popupModal.open .infoBox4::-webkit-scrollbar-thumb:hover {
+	background: #9c6644;
+}
+.rusticHover:hover {
+	background-color: #b08968;
+}
+.rusticScrollFormatting::-webkit-scrollbar {
+	width: 10px;
+}
+.rusticScrollFormatting::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+.rusticScrollFormatting::-webkit-scrollbar-thumb:hover {
+	background: #9c6644;
+}
+.rusticScrollFormatting::-webkit-scrollbar-thumb {
+	background: #7f5539;
+	border-radius: 10px;
+}
+
+/*styling the scrollbox for soft layout for popups*/
+
+.popupModal.open .infoBox1::-webkit-scrollbar {
+	width: 20px;
+}
+.popupModal.open .infoBox1::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+
+.popupModal.open .infoBox1::-webkit-scrollbar-thumb {
+	background: rgb(182, 179, 179);
+	border-radius: 10px;
+}
+.popupModal.open .infoBox1::-webkit-scrollbar-thumb:hover {
+	background: rgb(133, 132, 132);
+}
+
+/*styling for regular timeline scrollbar*/
+.standardTL::-webkit-scrollbar {
+	width: 3px;
+}
+.standardTL::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 3px;
+}
+.standardTL::-webkit-scrollbar-thumb:hover {
+	background: rgb(0, 0, 0);
+}
+.standardTL::-webkit-scrollbar-thumb {
+	background: rgb(59, 57, 57);
+	border-radius: 3px;
+}
+/* styling scrollbox for the gallery slideshow */
+.displayView::-webkit-scrollbar {
+	width: 20px;
+}
+.displayView::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+.formatPopupScrollBar::-webkit-scrollbar {
+	width: 10px;
+}
+.formatPopupScrollBar::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 10px;
+}
+.formatPopupScrollBar::-webkit-scrollbar-thumb:hover {
+	background: rgb(133, 132, 132);
+}
+.formatPopupScrollBar::-webkit-scrollbar-thumb {
+	background: rgb(182, 179, 179);
+	border-radius: 10px;
+}
+
+.displayView::-webkit-scrollbar-thumb {
+	background: rgb(182, 179, 179);
+	border-radius: 10px;
+}
+.displayView::-webkit-scrollbar-thumb:hover {
+	background: rgb(133, 132, 132);
+}
+
+.popupModal.open .popContent {
+	transition: all 300ms ease-in-out;
+	transform: translate(-50%, -50%) scale(1);
+	margin-top: -20px;
+}
+.popupModal.open .popContent1 {
+	transition: all 300ms ease-in-out;
+	transform: translate(-50%, -50%) scale(1);
+	margin-top: -20px;
+}
+
+.popupModal.preview .greyedoutBackground {
+	display: block;
+}
+.popupModal.preview .infoBox {
+	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	word-wrap: break-word;
+}
+.popupModal.preview .infoBox1 {
+	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	word-wrap: break-word;
+}
+.popupModal.preview .infoBox3 {
+	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	word-wrap: break-word;
+}
+.popupModal.preview .infoBox4 {
+	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	word-wrap: break-word;
+}
+.popupModal.preview .infoBox5 {
+	display: inline-block;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	word-wrap: break-word;
+}
+.popupModal.preview .popContent1 {
+	transition: all 300ms ease-in-out;
+	transform: translate(-50%, -50%) scale(1);
+	margin-top: 100px;
+}
+.popupModal.preview .popContent {
+	transition: all 300ms ease-in-out;
+	transform: translate(-50%, -50%) scale(1);
+	margin-top: 100px;
+}
+.close {
+	cursor: pointer;
+	position: absolute;
+	right: 5px;
+	margin-top: -10px;
+
+	width: 30px;
+	height: 30px;
+	color: black;
+	font-size: 25px;
+	font-weight: 30;
+	line-height: 30px;
+}
+.popupModal {
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 30px;
+	height: 30px;
+	z-index: 3;
+
+	color: rgb(14, 1, 1);
+
+	text-align: center;
+}
