@@ -1,24 +1,9 @@
-.formatNavBar {
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-		"Lucida Sans", Arial, sans-serif;
-	float: right;
-	margin-right: 30px;
-	margin-top: 10px;
-	background-color: white;
-	/*CITATION: learned how to create a box shadow: https://www.w3schools.com/css/css3_shadows_box.asp*/
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	border-radius: 5px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.landingCover {
-	height: 100vh;
+.image-container {
+	background-image: url("https://i.pinimg.com/736x/d0/6e/77/d06e77ce2c660ad82f1c28175daaacac--cloud-wallpaper-baby-rooms.jpg"); /* The image used - important! */
 	background-size: cover;
-	background-position: center;
-}
-
-
+	position: relative; /* Needed to position the cutout text in the middle of the image */
+	height: 300px; /* Some height */
+  }
   
   .text {
 	background-color: white;
