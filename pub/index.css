@@ -51,11 +51,19 @@ color:rgb(139, 203, 224);		font-size: 16pt;
 	}
 
 	
+	.docButton:hover{
+		background-color:rgb(74, 185, 223);	
+		color: white;
 	
+	}
 	.docButton {
 		text-decoration: none;
 		padding: 10px;
-		border-radius: 5px;
+		border-radius: 10px;
+		border-width: 2px;
+		border-style: solid;
+		border-color: white;
+	
 		
 		
 		
